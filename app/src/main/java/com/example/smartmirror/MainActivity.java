@@ -18,5 +18,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent( this, FreeTalking.class);
         startActivity(intent);
     }
-
+    public void ClickBtn_video(View view) {
+        Intent intent = new Intent( this, GuideVideo.class);
+        startActivity(intent);
+    }
 }

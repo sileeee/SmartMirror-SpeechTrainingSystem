@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FreeTalking" />
+        <activity android:name=".GuideVideo" />
     </application>
 
 </manifest>
