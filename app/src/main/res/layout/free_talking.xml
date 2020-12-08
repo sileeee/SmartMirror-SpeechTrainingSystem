@@ -7,22 +7,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="20dp"
     tools:context=".FreeTalking">
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/start_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Free Talking Start" />
 
     <TextView
-        android:id="@+id/textTv"
-        android:layout_width="match_parent"
+        android:id="@+id/speech"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press mic button to input voice."
-        android:textSize="20sp"
-        android:textColor="#000"/>
-    <ImageButton
-        android:id="@+id/voiceBtn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@null"
-        android:src="@drawable/ic_mic"
-        android:scaleType="fitCenter"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_gravity="center" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/textTv"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Press mic button to input voice."-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textColor="#000"/>-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/voiceBtn"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:background="@null"-->
+    <!--        android:src="@drawable/ic_mic"-->
+    <!--        android:scaleType="fitCenter"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_centerVertical="true"/>-->
 </RelativeLayout>
 
