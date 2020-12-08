@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void ClickBtn(View view) {
-        Intent intent = new Intent( this, GuideVideo.class);
+        Intent intent = new Intent( this, FreeTalking.class);
         startActivity(intent);
     }
 
