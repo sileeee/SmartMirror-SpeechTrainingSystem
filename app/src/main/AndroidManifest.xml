@@ -14,10 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".VideoPractice"></activity>
-        <!-- <activity -->
-        <!-- android:name=".Speak2" -->
-        <!-- android:label="@string/title_activity_speak2" -->
-        <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

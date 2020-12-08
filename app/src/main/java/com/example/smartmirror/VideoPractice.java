@@ -6,13 +6,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -28,25 +25,28 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class VideoPractice extends AppCompatActivity {
+    public static final Integer RecordAudioRequestCode = 1;
+    private SpeechRecognizer speechRecognizer;
+    private EditText editText;
+    private ImageView micButton;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_practice);
+        if(ContextCompat.checkSelfPermission(this,Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
+            checkPermission();
+        }
 
-        checkPermission();
+        editText = findViewById(R.id.text);
+        micButton = findViewById(R.id.button);
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
 
-        final EditText editText = findViewById(R.id.editText);
+        final Intent speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
 
-        final SpeechRecognizer mSpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
-
-
-        final Intent mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ko-KR");
-//        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,
-//                Locale.getDefault());
-
-
-        mSpeechRecognizer.setRecognitionListener(new RecognitionListener() {
+        speechRecognizer.setRecognitionListener(new RecognitionListener() {
             @Override
             public void onReadyForSpeech(Bundle bundle) {
 
@@ -54,7 +54,8 @@ public class VideoPractice extends AppCompatActivity {
 
             @Override
             public void onBeginningOfSpeech() {
-
+                editText.setText("");
+                editText.setHint("Listening...");
             }
 
             @Override
@@ -79,13 +80,9 @@ public class VideoPractice extends AppCompatActivity {
 
             @Override
             public void onResults(Bundle bundle) {
-                //getting all the matches
-                ArrayList<String> matches = bundle
-                        .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-
-                //displaying the first match
-                if (matches != null)
-                    editText.setText(matches.get(0));
+                micButton.setImageResource(R.drawable.ic_mic_black_off);
+                ArrayList<String> data = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+                editText.setText(data.get(0));
             }
 
             @Override
@@ -99,36 +96,41 @@ public class VideoPractice extends AppCompatActivity {
             }
         });
 
-
-        findViewById(R.id.button).setOnTouchListener(new View.OnTouchListener() {
+        micButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_UP:
-                        mSpeechRecognizer.stopListening();
-                        editText.setHint("You will see input here");
-                        break;
-
-                    case MotionEvent.ACTION_DOWN:
-                        mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
-                        editText.setText("");
-                        editText.setHint("Listening...");
-                        break;
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    speechRecognizer.stopListening();
+                }
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN){
+                    micButton.setImageResource(R.drawable.ic_mic);
+                    speechRecognizer.startListening(speechRecognizerIntent);
                 }
                 return false;
             }
         });
+
+
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        speechRecognizer.destroy();
+    }
 
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)) {
-                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                        Uri.parse("package:" + getPackageName()));
-                startActivity(intent);
-                finish();
-            }
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.RECORD_AUDIO},RecordAudioRequestCode);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == RecordAudioRequestCode && grantResults.length > 0 ){
+            if(grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show();
         }
     }
 }
