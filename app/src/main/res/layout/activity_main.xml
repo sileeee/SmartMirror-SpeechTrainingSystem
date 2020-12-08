@@ -12,7 +12,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="ClickBtn"
+        android:onClick="ClickBtn3"
         android:text="예제 보고 따라하기"
         android:textAllCaps="false" />
 
@@ -22,11 +22,10 @@
         android:text = "자유 말하기 연습"
         android:textAllCaps="false"
         android:onClick="ClickBtn"/>
-
     <Button
         android:layout_width = "match_parent"
         android:layout_height="wrap_content"
-        android:text = "비디오"
+        android:text = "자유 말하기 연습(임시)"
         android:textAllCaps="false"
-        android:onClick="ClickBtn_video"/>
+        android:onClick="ClickBtn2"/>
 </LinearLayout>

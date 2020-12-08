@@ -78,7 +78,7 @@ public class FreeTalking extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
-                    Speech.setText("You have said " + matches_text.get(position));
+                    Speech.setText(matches_text.get(position));
                     match_text_dialog.hide();
                 }
             });
