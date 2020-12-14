@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 import androidx.annotation.NonNull;
@@ -37,6 +39,8 @@ public class GuideVideo extends AppCompatActivity {
     private SpeechRecognizer speechRecognizer;
     private EditText editText;
     private ImageView micButton;
+    ArrayList<SampleData> videoDataList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,6 +145,29 @@ public class GuideVideo extends AppCompatActivity {
                 return false;
             }
         });
+        this.InitializeMovieData();
+        ListView listView = (ListView)findViewById(R.id.listView);
+        final MyAdapter myAdapter = new MyAdapter(this,videoDataList);
+
+        listView.setAdapter(myAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id){
+                Toast.makeText(getApplicationContext(),
+                        myAdapter.getItem(position).getMovieName(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public void InitializeMovieData()
+    {
+        videoDataList = new ArrayList<SampleData>();
+
+        videoDataList.add(new SampleData("안녕하세요 동국대 학생입니다"));
+        videoDataList.add(new SampleData("하이"));
+        videoDataList.add(new SampleData("미션임파서블"));
 
     }//onCreate ..
 
