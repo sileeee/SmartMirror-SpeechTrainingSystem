@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".FreeTalking" />
         <activity android:name=".GuideVideo" />
+        <activity android:name=".MyAdapter" />
     </application>
 
 </manifest>
