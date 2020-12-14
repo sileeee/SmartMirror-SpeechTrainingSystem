@@ -22,10 +22,4 @@
         android:text = "자유 말하기 연습"
         android:textAllCaps="false"
         android:onClick="ClickBtn"/>
-    <Button
-        android:layout_width = "match_parent"
-        android:layout_height="wrap_content"
-        android:text = "자유 말하기 연습(임시)"
-        android:textAllCaps="false"
-        android:onClick="ClickBtn2"/>
 </LinearLayout>
