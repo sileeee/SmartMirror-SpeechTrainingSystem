@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuideVideo">
+    tools:context=".GuideVideo"
+    >
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/list"
         android:onClick="onClick1"
+        android:background="#44B3D8"
         android:text="테스트용 말하기 연습입니다."
         android:textAllCaps="false"
         ></Button>
@@ -23,11 +25,13 @@
         android:id="@+id/list2"
         android:onClick="onClick2"
         android:text="안녕하세요 동국대 학생입니다"
+        android:background="#7ECBE4"
         android:textAllCaps="false"
         ></Button>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#44B3D8"
         android:id="@+id/list3"
         android:onClick="onClick3"
         android:text="청각장애인을 위한 어플입니다"
@@ -41,9 +45,10 @@
         android:layout_centerInParent="true"/>
     <TextView
         android:layout_toLeftOf="@id/textA"
-        android:layout_width="190dp"
-        android:layout_height="320dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="90dp"
         android:orientation="vertical"
         android:background="#000000"
@@ -51,9 +56,10 @@
     <VideoView
         android:layout_toRightOf="@id/textA"
         android:id="@+id/vv"
-        android:layout_width="190dp"
-        android:layout_height="320dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="200dp"
         android:layout_gravity="center"
         android:layout_marginBottom="90dp"
         android:orientation="vertical"
