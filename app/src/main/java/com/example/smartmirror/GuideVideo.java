@@ -17,7 +17,7 @@ public class GuideVideo extends AppCompatActivity {
 
         vv= findViewById(R.id.vv);
         //Video Uri
-        Uri videoUri= Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
+        Uri videoUri= Uri.parse("https://r1---sn-npoe7nlz.googlevideo.com/videoplayback?expire=1607951097&ei=mQ7XX9f5Ko3PxwKv-4y4Dg&ip=180.247.196.192&id=o-AJHodvf6HOhybj0qiClOw2cuq3eQHyYIlAjJgxU3IDAa&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=EGWzC-DjLp4GxOXSxr4YRMUF&gir=yes&clen=151658650&ratebypass=yes&dur=3356.281&lmt=1605268093672951&fvip=1&c=WEB&txp=6430432&n=UQ-7QDM9r7w4hSLvQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhALh0AyCtAFF_diCxr0bF2Ftiv-Hk2cuoiWNP9soOBo97AiEAg-G52ToiJIfrt4T0xLHtLgH0iyqcrTiSL6koEOcBG7U%3D&redirect_counter=1&rm=sn-2uuxa3vh-n0cr7e&req_id=5d42995eeacca3ee&cms_redirect=yes&ipbypass=yes&mh=3o&mm=29&mn=sn-npoe7nlz&ms=rdu&mt=1607929256&mv=m&mvi=1&pl=23&lsparams=ipbypass,mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgNdMAitnSXhXZpR30RBtpqipBL7FScwtGVDLbhulITaUCIQDKzvBqggw-dcFw2QjblMkFlNAdRqsfBH6u02xNJyNbXQ%3D%3D");
         // 자체 경로
         Uri introURI;
         introURI = Uri.parse("android.resource://your.app.package/" + R.raw.test);
