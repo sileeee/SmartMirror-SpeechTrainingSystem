@@ -5,7 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GuideVideo">
-
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:onClick="onClick1"
+        android:text="테스트용 말하기 연습입니다."
+        android:textAllCaps="false"
+        ></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list2"
+        android:onClick="onClick2"
+        android:text="안녕하세요 동국대 학생입니다"
+        android:textAllCaps="false"
+        ></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list3"
+        android:onClick="onClick3"
+        android:text="청각장애인을 위한 어플입니다"
+        android:textAllCaps="false"
+        ></Button>
+</LinearLayout>
     <TextView
         android:id="@+id/textA"
         android:layout_width="1dp"
