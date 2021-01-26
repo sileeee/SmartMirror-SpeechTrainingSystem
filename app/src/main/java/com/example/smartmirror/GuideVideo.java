@@ -41,6 +41,11 @@ public class GuideVideo extends AppCompatActivity {
     private ImageView micButton;
     private Button Button_event;
 
+    public void ClickBtnAnalysis(View view) {
+        Intent intent = new Intent( this, Analysis.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
