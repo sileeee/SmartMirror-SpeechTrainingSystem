@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_array">
+        <item>video1</item>
+        <item>video2</item>
+        <item>video3</item>
+        <item>video4</item>
+        <item>video5</item>
+    </string-array>
+</resources>
