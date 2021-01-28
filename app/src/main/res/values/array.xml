@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="my_array">
+    <string-array name="video_array">
         <item>video1</item>
         <item>video2</item>
         <item>video3</item>
