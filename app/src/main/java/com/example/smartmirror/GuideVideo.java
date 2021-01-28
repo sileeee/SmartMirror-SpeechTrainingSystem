@@ -70,7 +70,7 @@ public class GuideVideo extends AppCompatActivity {
 
 
                     //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-                    vv.setMediaController(new MediaController(this));
+                    //vv.setMediaController(new MediaController(this));
 
                     //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
                     vv.setVideoURI(videoUri);
@@ -85,9 +85,9 @@ public class GuideVideo extends AppCompatActivity {
                             vv.start();
                         }
                     });
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                        checkPermission();
-                    }
+                    //if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    //    checkPermission();
+                    //}
                 }
                 else if(position == 3)
                 {
@@ -98,7 +98,7 @@ public class GuideVideo extends AppCompatActivity {
 
 
                     //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-                    vv.setMediaController(new MediaController(this));
+                    //vv.setMediaController(new MediaController(this));
 
                     //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
                     vv.setVideoURI(videoUri);
@@ -113,9 +113,9 @@ public class GuideVideo extends AppCompatActivity {
                             vv.start();
                         }
                     });
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                        checkPermission();
-                    }
+                    //if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    //    checkPermission();
+                    //}
                 }
                 else if(position == 4)
                 {
@@ -133,7 +133,7 @@ public class GuideVideo extends AppCompatActivity {
 
 
                     //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-                    vv.setMediaController(new MediaController(this));
+                    //vv.setMediaController(new MediaController(this));
 
                     //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
                     vv.setVideoURI(videoUri);
@@ -148,9 +148,9 @@ public class GuideVideo extends AppCompatActivity {
                             vv.start();
                         }
                     });
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                        checkPermission();
-                    }
+                    //if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    //    checkPermission();
+                    //}
                 }
             }
             @Override
