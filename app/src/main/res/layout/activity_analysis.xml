@@ -5,5 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Analysis">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#44B3D8"
+            android:onClick="ClickBtnBack"
+            android:text="이전 페이지"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="200dp"
+            android:layout_alignParentBottom="true"></Button>
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
