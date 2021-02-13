@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop = "100dp"
         android:orientation="vertical">
         <Button
             android:layout_width="match_parent"
@@ -16,33 +17,12 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:id="@+id/list"
-            android:onClick="onClick1"
+            android:onClick="ClickBtnAnalysis"
             android:background="#44B3D8"
-            android:text="테스트용 말하기 연습입니다."
+            android:text="분석 페이지로 이동"
             android:textAllCaps="false"
             ></Button>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/list2"
-            android:onClick="onClick2"
-            android:text="안녕하세요 동국대 학생입니다"
-            android:background="#7ECBE4"
-            android:textAllCaps="false"
-            ></Button>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="#44B3D8"
-            android:id="@+id/list3"
-            android:onClick="onClick3"
-            android:text="청각장애인을 위한 어플입니다"
-            android:textAllCaps="false"
-            ></Button>
+
     </LinearLayout>
     <TextView
         android:id="@+id/textA"
@@ -80,17 +60,6 @@
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/analysis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="630dp"
-            android:padding="10dp"
-            android:background="#44B3D8"
-            android:onClick="ClickBtnAnalysis"
-            android:text="분석 페이지로 이동"
-            android:textAllCaps="false"></Button>
 
         <EditText
             android:layout_width="match_parent"
