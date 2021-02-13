@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void ClickBtn3(View view) {
-        Intent intent = new Intent( this, GuideVideo.class);
+        Intent intent = new Intent( this, SelectVideo.class);
         startActivity(intent);
     }
 }

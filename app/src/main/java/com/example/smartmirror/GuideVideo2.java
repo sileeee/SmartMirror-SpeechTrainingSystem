@@ -33,7 +33,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class GuideVideo extends AppCompatActivity {
+public class GuideVideo2 extends AppCompatActivity {
     VideoView vv;
     public static final Integer RecordAudioRequestCode = 1;
     private SpeechRecognizer speechRecognizer;
@@ -49,7 +49,7 @@ public class GuideVideo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guide_video);
+        setContentView(R.layout.activity_guide_video2);
 
         Button_event = (Button)findViewById(R.id.list);
 
@@ -79,6 +79,7 @@ public class GuideVideo extends AppCompatActivity {
         });
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             checkPermission();
+
         }
 
         editText = findViewById(R.id.text);
@@ -188,5 +189,7 @@ public class GuideVideo extends AppCompatActivity {
                 Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 }
