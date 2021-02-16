@@ -3,6 +3,4 @@
     <item name="start_reg" type="id" />
     <item name="speech" type="id" />
 
-<!--  audion test -->
-    <id name="textView" type="id" />
 </resources>
