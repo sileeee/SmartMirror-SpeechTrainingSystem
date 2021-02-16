@@ -23,6 +23,10 @@ public class AudioMain extends Activity
         audioReader = new AudioReader();
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
+    }
+
+    public void onStart(View v)
+    {
         audioReader.startReader(sampleRate, inputBlockSize * sampleDecimate, new AudioReader.Listener()
         {
             @Override
@@ -39,33 +43,15 @@ public class AudioMain extends Activity
         });
     }
 
-//    public void doStart(View v)
-//    {
-//        audioReader.startReader(sampleRate, inputBlockSize * sampleDecimate, new AudioReader.Listener()
-//        {
-//            @Override
-//            public final void onReadComplete(int dB)
-//            {
-//                receiveDecibel(dB);
-//            }
-//
-//            @Override
-//            public void onReadError(int error)
-//            {
-//
-//            }
-//        });
-//    }
-
     private void receiveDecibel(final int dB)
     {
-        Log.e("###", dB+" dB");
-//        TextView tv = (TextView) findViewById(R.id.textView);
-//        tv.setText("DeciBel Is"+dB+"dB");
+//        Log.e("###", dB+" dB");
+        TextView tv = (TextView) findViewById(R.id.textView);
+        tv.setText("DeciBel Is"+dB+"dB");
 
     }
 
-    public void doStop(View v)
+    public void onStop(View v)
     {
         audioReader.stopReader();
     }
