@@ -2,4 +2,5 @@
 <resources>
     <item name="start_reg" type="id" />
     <item name="speech" type="id" />
+    <id name="textView" type="id" />
 </resources>
