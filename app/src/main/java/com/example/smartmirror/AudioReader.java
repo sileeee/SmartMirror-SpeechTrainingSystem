@@ -5,6 +5,7 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.util.Log;
 
+// audio test file
 public class AudioReader
 {
     public static abstract class Listener
