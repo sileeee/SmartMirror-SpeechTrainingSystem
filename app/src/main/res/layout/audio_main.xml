@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AudioProcessing">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding = "16dp"
+        android:gravity="center"
+        tools:context=".MainActivity"
+        android:background="#F4EE9C"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:paddingBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#44B3D8"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:text="StartStopButton"
+            android:textAllCaps="false"
+            android:id="@+id/StartStopButton"
+            />
+
+<!--        <Button-->
+<!--            android:layout_width = "match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text = "saveButton"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:onClick="doInBackground"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:background="#51C1E6"/>-->
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
