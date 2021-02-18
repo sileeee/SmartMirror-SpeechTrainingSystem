@@ -18,4 +18,8 @@ public class SelectVideo extends AppCompatActivity {
         Intent intent = new Intent( this, GuideVideo.class);
         startActivity(intent);
     }
+    public void ClickVideo2(View view) {
+        Intent intent = new Intent( this, GuideVideo2.class);
+        startActivity(intent);
+    }
 }

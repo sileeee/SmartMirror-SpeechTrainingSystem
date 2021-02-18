@@ -39,7 +39,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:id="@+id/list2"
-            android:onClick="ClickVideo1"
+            android:onClick="ClickVideo2"
             android:text="기능 소개 입니다."
             android:background="#7ECBE4"
             android:textAllCaps="false"
