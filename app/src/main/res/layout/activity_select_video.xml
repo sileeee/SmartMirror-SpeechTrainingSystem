@@ -29,7 +29,7 @@
             android:id="@+id/list"
             android:onClick="ClickVideo1"
             android:background="#44B3D8"
-            android:text="테스트용 말하기 연습입니다."
+            android:text="테스트용 예제 비디오 영상입니다."
             android:textAllCaps="false"
             ></Button>
         <Button
@@ -40,20 +40,8 @@
             android:layout_marginRight="15dp"
             android:id="@+id/list2"
             android:onClick="ClickVideo1"
-            android:text="안녕하세요 동국대 학생입니다"
+            android:text="기능 소개 입니다."
             android:background="#7ECBE4"
-            android:textAllCaps="false"
-            ></Button>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="#44B3D8"
-            android:id="@+id/list3"
-            android:onClick="ClickVideo1"
-            android:text="청각장애인을 위한 어플입니다"
             android:textAllCaps="false"
             ></Button>
     </LinearLayout>
