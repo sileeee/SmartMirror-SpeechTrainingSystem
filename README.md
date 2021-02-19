@@ -15,7 +15,6 @@
 ## 개발 환경 
 ```
  * AndroidStudio
- 
 ```   
 
 ## 동작 개요
@@ -26,7 +25,7 @@
 
 ## 결과
 
-![예제 비디오](https://user-images.githubusercontent.com/31584255/108493569-d0be2200-72e9-11eb-9c9a-be1dbacc587a.png)
+![예제 비디오](https://user-images.githubusercontent.com/31584255/108493813-22ff4300-72ea-11eb-945e-52193711d938.png)
 ![발음이 명확하지 않은 경우](https://user-images.githubusercontent.com/31584255/108493617-dddb1100-72e9-11eb-85ae-209bbcb9c19e.png)
 ![발음이 명확한 경우](https://user-images.githubusercontent.com/31584255/108493650-e7fd0f80-72e9-11eb-89cd-53a754724962.png)
 
