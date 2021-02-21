@@ -26,7 +26,7 @@
 
 ## 결과
 
-![2021-02-19 194235](https://user-images.githubusercontent.com/31584255/108494279-acaf1080-72ea-11eb-98a2-d5aae3ec8fba.png)
+![12](https://user-images.githubusercontent.com/31584255/108616799-3c240300-7454-11eb-8d2d-378dd250a7d9.png)
 
 
 ## 팀원
